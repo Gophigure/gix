@@ -1,3 +1,5 @@
+// Package math provides alternatives to the standard library's Max and Min functions that accept
+// any builtin number type that supports arithmetic, as well as utility type constraints.
 package math
 
 type (
