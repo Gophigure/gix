@@ -31,12 +31,34 @@ func Min[T Number](a, b T) T {
 	return a
 }
 
+// MinSet returns the smallest number in a set.
+func MinSet[T Number](set ...T) T {
+	var min T
+	for _, v := range set {
+		if v < min {
+			min = v
+		}
+	}
+	return min
+}
+
 // Max returns the larger of the two numbers.
 func Max[T Number](a, b T) T {
 	if a > b {
 		return a
 	}
 	return b
+}
+
+// MaxSet returns the largest number in a set.
+func MaxSet[T Number](set ...T) T {
+	var max T
+	for _, v := range set {
+		if v > max {
+			max = v
+		}
+	}
+	return max
 }
 
 // Sum returns the sum of all numbers passed.
