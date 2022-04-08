@@ -5,18 +5,17 @@ import (
 	"strconv"
 )
 
-var (
-	sizesSI = []uint64{
-		999,
-		1_000,
-		1_000_000,
-		1_000_000_000,
-		1_000_000_000_000,
-		1_000_000_000_000_000,
-		1_000_000_000_000_000_000,
-	}
-	suffixes = "b B    KbKiBKBMbMiBMBGbGiBGBTbTiBTBPbPiBPBEbEiBEB"
-)
+const suffixes = "b B    KbKiBKBMbMiBMBGbGiBGBTbTiBTBPbPiBPBEbEiBEB"
+
+var sizesSI = []uint64{
+	999,
+	1_000,
+	1_000_000,
+	1_000_000_000,
+	1_000_000_000_000,
+	1_000_000_000_000_000,
+	1_000_000_000_000_000_000,
+}
 
 // Bytes formats using SI sizes. Only supports base 10.
 func Bytes(b uint64) string {
