@@ -70,3 +70,6 @@ func Sum[T Number](numbers ...T) (sum T) {
 	}
 	return
 }
+
+// Signed returns whether the passed integer is signed.
+func Signed[T Int | Uint](_ T) bool { return ^T(0) < 0 }
